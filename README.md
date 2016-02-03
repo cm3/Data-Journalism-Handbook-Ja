@@ -1,8 +1,10 @@
 # これは何？
 
-[The Data Journalism Handbook の日本語訳プロジェクト](https://www.transifex.com/liliana.bounegru/the-data-journalism-handbook/language/ja_JP/)の現状を HTML 化するためのスクリプト。`update.sh` で、Transifex から翻訳ファイルを pull してきて、asciidoc でレンダリングできる。figs は [okfn/ddjbook in GitHub](https://github.com/okfn/ddjbook/tree/web/web/figs/)よりコピー。
+[The Data Journalism Handbook の日本語訳プロジェクト](https://www.transifex.com/liliana.bounegru/the-data-journalism-handbook/language/ja_JP/)の現状を HTML 化するためのスクリプト。`update.sh` で、Transifex から翻訳ファイルを pull してきて、asciidoc でレンダリングできる。figs は [okfn/ddjbook in GitHub](https://github.com/okfn/ddjbook/tree/web/web/figs/) よりコピー。
 
 # 必要な準備
+
+Python 2 を使う。
 
 ```
 virtualenv py2env
@@ -15,7 +17,7 @@ sudo apt-get install asciidoc
 
 # 毎回の更新
 
-途中止まったように見えるが、辛抱強く待つと Done となる。1～2分程度。
+所要時間 1～2分程度。
 
 ```
 source ./update.sh
