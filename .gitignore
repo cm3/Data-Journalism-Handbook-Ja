@@ -1,3 +1,5 @@
 .tx
 translations
 py2env
+jekyll/*.html
+jekyll/_site/*
