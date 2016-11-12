@@ -490,9 +490,9 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Dirty Data</div>
+<div class="title">汚いデータ</div>
 <div class="paragraph">
-<p>Thanks to the generally strong public records laws in the United States, getting data here isn&#8217;t as big a problem as it can be in many other countries. But once we get it, we still face the problems of working with data that has been gathered for bureaucratic reasons, not for analytic reasons. The data often is ``dirty,'' with values that aren&#8217;t standardized. Several times I have received data that doesn&#8217;t match up to the supposed file layout and data dictionary that accompanies it. Some agencies will insist on giving you the data in awkward formats like .pdf, which have to be converted. Problems like these make you appreciate it when you do get an occasional no-hassle dataset.</p>
+<p>公的文書の扱いに関するアメリカ合衆国の法律のおかげで、この国ではデータを収集することは多くのほかの国で想像されるほど難しくない。しかし、データを収集したとしても、今度は集められたデータを取り扱う際に困難に直面する。それは、分析の問題というよりお役所仕事によるものだ。データはしばしば”汚い”もので、値はルールに従っていない。これまで幾度となく、指定のレイアウトに従っていなかったり、添付されたデータ辞書に従っていないデータを受け取った経験がある。いくつかの政府機関は、.pdfのような扱いにくいフォーマットしか提供してくれず、変換が必要になるだろう。こうした問題を経た後、希に面倒な作業無しに扱えるデータを得た時に感謝したいと思うようになるかもしれない。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Steve Doig, Walter Cronkite School of Journalism, Arizona State University</em></p>
@@ -506,13 +506,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>データベースの重要な鍵となるのはデータ辞書と呼ばれるものだ。典型的には、このファイル（テキストやPDF、スプレッドシートの時もある）は、データファイルがどのようなフォーマットになっているか（区切りを持つテキスト、固定長のテキスト、エクセル、ディーベースなど）、要素の並べ替えの順番、それぞれの要素の名前とデータのタイプ（文字列、整数、１０進数など）。あなたはこの情報をあなたが使おうとしている分析用のソフトウェア（エクセル、アクセス、SPSS、フュージョン・テーブル、各種SQLなど）に適切に読み込むために使う。</p>
 </div>
 <div class="paragraph">
-<p>The other key element of a data dictionary is an explanation of any codes being used by particular variables. For instance, Gender may be coded so that "1=Male" and "0=Female." Crimes may be coded by your jurisdiction&#8217;s statute numbers for each kind of crime. Hospital treatment records may use any of hundreds of 5-digit codes for the diagnoses of the conditions for which a patient is being treated. Without the data dictionary, these datasets could be difficult or even impossible to analyze properly.</p>
+<p>データ辞書のもう一つの重要な要素は、特定の変数で使われる記法の説明だ。例えば性別は、"1=男性"・"0=女性"と記述される。犯罪は、それぞれの犯罪の種類ごとに、管轄地域の法令番号を使って記述されるだろう。病院のカルテは、数百通りにおよぶ5桁のコードを、診察を受けた患者の病状に応じて使い分ける。データ辞書がなければ、こうしたデータを正しく分析することは難しくなるか、あるいは全く不可能になることすらある。</p>
 </div>
 <div class="paragraph">
-<p>But even with a data dictionary in hand, there can be problems. An example happened to reporters at the Miami Herald in Florida some years ago when they were doing an analysis of the varying rates of punishment that different judges were giving to people arrested for driving while intoxicated. The reporters acquired the conviction records from the court system and analyzed the numbers in the three different punishment variables in the data dictionary: amount of prison time given, amount of jail time given, and amount of fine given. These numbers varied quite a bit amongst the judges, giving the reporters' evidence for a story about how some judges were harsh and some were lenient.</p>
+<p>例えデータ辞書を手にしていたとしても、まだ問題は起こりうる。例えば、数年前フロリダのマイアミ・ヘラルドのレポーターにこんなことがあった。彼らが、裁判官ごとに異なる酔っ払い運転の逮捕者への判決の重さを分析していた時のことだ。レポーターは有罪判決の記録を裁判所のシステムから引き出し、データ辞書に含まれる３つの要素の数値を分析した。懲役刑の量、懲役の量、罰金の量である。こうした数値は裁判官によってかなり異なっていて、レポーター達は、ある裁判官が厳格である一方で別の裁判官は寛大であるというストーリーの裏付けを得た。</p>
 </div>
 <div class="paragraph">
-<p>But for every judge, about 1-2 percent of the cases showed no prison time, no jail time, and no fine. So the chart showing the sentencing patterns for each judge included a tiny amount of cases as ``No punishment,'' almost as an afterthought. When the story and chart was printed, the judges howled in complaint, saying the Herald was accusing them of breaking a state law that required that anyone convicted of drunk driving be punished.</p>
+<p>だが判決の約1〜2%で、懲役刑も懲役も罰金も示していないものがあった。だから、それぞれの裁判官についての量刑のパターンを表す図には、結果として"罪に問われない"というケースが少量ながら含まれていた。この記事と図が出版された時、裁判官達は抗議の声を上げた。ヘラルド紙は、裁判官達が酔っ払い運転で有罪の判決を受けた者は罰を受けなくてはならないという州法を破っていると批判している、として。</p>
 </div>
 <div class="paragraph">
 <p>しかし、データ辞書を手にしたとしても、まだ問題は残っている。数年前にフロリダのマイアミヘラルドのレポーター達、飲酒運転で逮捕された人々に下された刑罰の審判結果の裁判官による違いを分析していた時に、こんな事が起こった。レポーター達は有罪の記録を裁判所のシステムから取得し、データの中の３つの異なる刑罰についての数値ー拘置された期間、刑務所の刑期を分析した。 こうした数値は審判によってかなりばらつきがあり、レポーター達にある裁判官は厳しく、またある裁判官は寛大であるというストーリーの証拠をもたらし。</p>
@@ -526,12 +526,12 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <?dbfo-need height="2in"?>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Mixed Up, Hidden and Absent Data</div>
+<div class="title">ごちゃまぜになっていたり、隠されていたり、あるいは存在しないデータ</div>
 <div class="paragraph">
-<p>I remember a funny situation where we tried to access the Hungarian data on EU farm subsidies: it was all there&#8212;&#8203;but in an excessively heavy PDF document and mixed up with data on national farm subsidies. Our programmers had to work for <em>hours</em> before the data was useful.</p>
+<p>こんなおかしな事があった。我々はハンガリー人のEU農業補助金についてのデータにアクセスしようとしていた。実際データは全てそろっていたのだが、ひどく重たいPDF書類の中にあって、国内の農業補助金のデータとごちゃ混ぜになっていたのだ。我々のプログラマーは、データを利用可能な形式にするために <em>何時間も</em> 作業をしなければならなかった。</p>
 </div>
 <div class="paragraph">
-<p>We also had a pretty interesting time with data about EU fish subsidies, which national payment agencies in all 27 Member States are obliged to disclose. Here&#8217;s an excerpt from <a href="http://bit.ly/alfter-eu27">a report we wrote on the topic</a>: ``In the United Kingdom, for example, the format of the data varies from very user-friendly HTML search pages to PDF overviews or even lists of recipients in varying formats hidden away at the bottom of press releases. All this is within just one member state. In Germany and Bulgaria, meanwhile, empty lists are published. The appropriate headings are there but without any data.''</p>
+<p>EUの漁業補助金についてのデータを扱った時もなかなか面白かった。27のEU加盟国の政府給付機関が提出を義務づけられていたものだ。ここにhttp://bit.ly/alfter-eu27[我々が書いたレポート]の抜粋がある。「例えば英国では、データのフォーマットがそれぞれ異なっていて、とてもユーザーフレンドリーなHTMLの検索ページからPDFの概要まで、あるいは様々なフォーマットで書かれた給付対象のリストがプレスリリースの最後に隠されていたこともあった。たった1カ国のデータだけでもこの有様である。さらに、ドイツとブルガリアでは空のリストが公開された。表題はきちんとあるが、データは空なのだ」。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Brigitte Alfter, Journalismfund.eu</em></p>
@@ -543,7 +543,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

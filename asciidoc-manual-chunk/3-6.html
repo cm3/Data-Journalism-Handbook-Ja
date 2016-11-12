@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>3.6. リアルタイム選挙ハック (Hacks/Hackers Buenos Aires)</title>
+<title>3.6. リアルタイム選挙ハック</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_3_6_リアルタイム選挙ハック_hacks_hackers_buenos_aires_a_id_fig0313_a">3.6. リアルタイム選挙ハック (Hacks/Hackers Buenos Aires)<a id="FIG0313"></a></h3>
+<h3 id="_3_6_リアルタイム選挙ハック_a_id_fig0313_a">3.6. リアルタイム選挙ハック<a id="FIG0313"></a></h3>
 <div class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/03-FF.png" alt="03 FF">
@@ -443,7 +443,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect3">
 <h4 id="_どんなデータを利用したのか">どんなデータを利用したのか?</h4>
 <div class="paragraph">
-<p>All data came from official sources: the National Electoral Bureau provided access to data of the provisional count by Indra; the Department of the Interior provided information about elected posts and candidates from different political parties; a <a href="http://yoquierosaber.org/">university project</a> provided biographical information and the policy platforms of each presidential ticket; while socio-demographic information came from the 2001 National Census of Population and Housing (INDEC), the 2010 Census (INDEC), and the Ministry of Health.</p>
+<p>データは全て公式なものを使用した: 政府の選挙事務局はIndraからの暫定データへのアクセスを提供した。内務省は当選者と様々な政党からの候補者の情報を提供した。http://yoquierosaber.org/[ある大学のプロジェクトチーム]は、それぞれの政党の経歴と政策についての情報を提供した。社会人口学的な情報は、2001年の国勢調査、2010年の国勢調査、そして厚生労働省からの情報による。</p>
 </div>
 </div>
 <div class="sect3">
@@ -452,7 +452,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>アプリケーションは、Hacks/Hackers Buenos Airesによる2011 Election Hackathonで選挙の前日の2011年10月23日に作られた。ハッカソンには30人の様々なバックグラウンドを持つボランティアが参加した。Electoral Hackはオープンなプラットフォームとして開発され、その後も改善できるようになっていた。技術的には、Google Fusion Tables、Google Maps、そしてベクターグラフィックを扱うためのライブラリを使用した。</p>
 </div>
 <div class="paragraph">
-<p>We worked on the construction of polygons for displaying geographic mapping and electoral demographics. Combining polygons in GIS software and geometries from public tables in Google Fusion Tables, we generated tables with keys corresponding to the electoral database of the Ministry of Interior, Indra, and sociodemographic data from INDEC. From this, we created visualizations in Google Maps.</p>
+<p>選挙の統計情報を地図上に表すために、ポリゴンを生成するようにした。GIS(地理情報処理システム)上のポリゴンとGoogle Fusion Tablesの公開テーブルの地理情報を組み合わせて、内務省の選挙データベースと国家統計センサス局による社会人口学的データに関連付けられたデータテーブルを作成した。このテーブルから、Google Maps上にビジュアライゼーションを作成した。</p>
 </div>
 <div class="paragraph">
 <p>Google Maps APIを使用して、異なる色を使って投票の空間分布を示す主題図を作成した。色の密度は、投票管理局や投票所ごとの投票先の分布を示している。特に、主要な都市での結果は強調してあった。ブエノスアイレス、ブエノスアイレスの都市圏の24の地域、コルドバ、ロザリオなどである。</p>
@@ -469,37 +469,37 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="ulist">
 <ul>
 <li>
-<p>We set out to find and represent data and we were able to do that.  We had the <a href="http://infoargentina.unicef.org.ar/">UNICEF&#8217;s database of child sociodemographics</a> at hand, as well as the database of candidates created by the yoquierosaber.org group of Torcuato Di Tella University. During the hackathon we gathered a large volume of additional data that we did not end up including.</p>
+<p>我々はデータを見つけ出して使用するつもりだったし、実際にそうすることが可能だった。我々はhttp://infoargentina.unicef.org.ar/[UNICEFが持つ子どもの社会人口学データベース] を手元に持っていたし、Torcuato Di Tella大学のyoquierosaber.orgグループが作成した候補者のデータベースも持っていた。ハッカソンの期間中に、我々は大量の追加データを集めて最後にはそれも含めることが出来た。</p>
 </li>
 <li>
-<p>It was clear that the journalistic and programming work was enriched by scholarship. Without the contributions of Andy Tow and Hilario Moreno Campos, the project would have been impossible to achieve.</p>
+<p>こうした調査やプログラミングが、大学の人々によってより良いものになったことは明らかだ。Andy TowとHilario Moreno Camposの貢献無しには、このプロジェクトを成し遂げることは出来なかった。</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_cons">Cons</h4>
+<h4 id="_反省点">反省点</h4>
 <div class="ulist">
 <ul>
 <li>
-<p>The sociodemographic data we could use was not up to date (most was from the 2001 census), and it was not very granular. For example, it did not include detail about local average GDP, main economic activity, education level, number of schools, doctors per capita, and lots of other things that it would have been great to have.</p>
+<p>我々が使用することが出来た社会人口学的データは最新のものではなかった（ほとんどは2001年の国政調査のものだ）し、粒度もそこまで細かくはなかった。例えばこのデータは、地域の平均GDPや主要な経済活動、教育水準、学校の数、一人当たりの医者の数、そしてその他のあれば素晴らしかったであろう事項の詳細を含んでいなかった。</p>
 </li>
 <li>
-<p>Originally the system was intended as a tool that could be used to combine and display any arbitrary data, so that journalists could easily display data that interested them on the Web. But we had to leave this for another time.</p>
+<p>元々このシステムはランダムなデータを組み合わせて表示しジャーナリスト達が興味をもったデータをウェブに描き出すことが出来るツールとして設計されていた。しかし、それについては別な機会に譲らなければならなかった。</p>
 </li>
 <li>
-<p>As the project was built by volunteers in a short time frame, it was impossible to do everything that we wanted to do. Nevertheless, we made a lot of progress in the right direction.</p>
+<p>このプロジェクトはボランティアのスタッフによって短期間で構築されたため、我々が望むこと全てを実現することは出来なかった。しかし、我々は正しい方向に向かい、かなりの進歩を遂げることができた。</p>
 </li>
 <li>
-<p>For the same reason, all the collaborative work of 30 people ended up condensed into a single programmer when the data offered by the government began to appear, and we ran into some problems importing data in real time. These were solved within hours.</p>
+<p>同じ利用で、30人以上の協力による作業の全ては、最後に政府が提供したデータが届き始めた時に一人のプログラマに凝縮された。そして、データをリアルタイムで取り込むのにいくつかの問題が発生した。こうした問題は数時間の内に解消された。</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_implications">Implications</h4>
+<h4 id="_結果">結果</h4>
 <div class="paragraph">
-<p>The Electoral Hack platform had a big impact in the media, with television, radio, print and online coverage. Maps from the project were used by several media platforms during the elections and in subsequent days. As the days went by, the maps and visualizations were updated, increasing traffic even more. On Election Day, the site created that very day received about 20 thousand unique visitors and its maps were reproduced on the cover page of the newspaper Página/12 for two consecutive days, as well as in articles in La Nación. Some maps appeared in the print edition of the newspaper Clarín. It was the first time that an interactive display of real-time maps had been used in the history of Argentine journalism. In the central maps one could clearly see the overwhelming victory of Cristina Fernandez de Kirchner by 54 percent of the vote, broken up by color saturation. It also served to help users understand specific cases where local candidates had landslide victories in the provinces.</p>
+<p>エレクトラル・ハックプラットフォームは、テレビ・ラジオ・紙媒体・オンライン媒体などのメディアに大きくとりあげられた。このプロジェクトが作成したマップは、選挙期間中とその後の数日の間、いくつかのメディアで利用された。その後もマップやビジュアライゼーションは更新され、さらにサイトへのトラフィックを増やした。選挙当日には、2万のユニークユーザーを獲得、マップは新聞Página/12の1面に2日連続で掲載され、La Naciónの記事でも取り上げられた。いくつかのマップはClarínの紙面にも掲載された。リアルタイムのデータ・マッピングのインタラクティブが使われたのは、アルゼンチンのジャーナリズム史上初めてのことである。このマッピングの色の塗り分けで、Cristina Fernandez de Kirchnerが54%の票を得て圧勝したことが明白に分かるようになっていた。またこのマップによって、地方の議員達が圧勝する様子も分かるようになっていた。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Mariano Blejman, Mariana Berruezo, Sergio Sorín, Andy Tow, and Martín Sarsale from Hacks/Hackers Buenos Aires</em></p>
@@ -509,7 +509,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

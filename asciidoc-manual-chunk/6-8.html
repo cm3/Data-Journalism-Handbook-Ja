@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>6.8. ヴェルデンス・ガングではデータをどう使っているか</title>
+<title>6.8. データ・ビジュアライゼーション・DIY：便利なツール</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,76 +430,205 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_6_8_ヴェルデンス_ガングではデータをどう使っているか">6.8. ヴェルデンス・ガングではデータをどう使っているか</h3>
+<h3 id="_6_8_データ_ビジュアライゼーション_diy_便利なツール">6.8. データ・ビジュアライゼーション・DIY：便利なツール</h3>
 <div class="paragraph">
-<p>ニュースジャーナリズムとは、新しい情報をできるだけ迅速に読者に届けることである。最も早い手段として、ビデオ、写真、文章、グラフ、表、それらの組み合わせが考えられる。ビジュアライゼーションに関心を向ける目的も同じであろう。つまり、素早く理解できる情報を届けるためである。データに関する新たなツールを使うことで、そのツールでなければ見つけることのできないストーリーを見つけ出すことや、今あるストーリーに新たな文脈を与えることが可能となる。ここではノルウェーで最も読まれている新聞「ヴェルデンス・ガング」の事例を紹介する。</p>
+<p>簡単に無料で使えるビジュアライゼーションツールはウェブ上にどれだけあるのだろうか。たとえば上の図はガーディアンのサイト <a href="http://www.guardian.co.uk/data">Datablog and Datastore</a> にあったものだ。ウェブにある無料のツールを利用して、できるだけ同じものを作ってみよう。</p>
+</div>
+<div class="paragraph">
+<p>ただしこれは少々、意地が悪く聞こえるかもしれない。というのも我々はガーディアンが持つ驚くべきグラフィックやインタラクティブなチームを利用できるからだ。それらがあれば、アドビのイラストレーターを利用して作られた <a href="http://bit.ly/guardian-spending">公共支出マップ</a> や <a href="http://bit.ly/guardian-riots">Twitter上の騒動の可視化</a> なども少しの時間で作れるはずだ。</p>
+</div>
+<div class="paragraph">
+<p>しかし日常業務において我々は、誰でも使えるツールを使い、誰でも作れるグラフィックを作ってしまいがちだ。</p>
+</div>
+<div class="paragraph">
+<p>では、いったい何を使えばいいのだろうか。</p>
 </div>
 <div class="sect3">
-<h4 id="_数値">数値</h4>
+<h4 id="__a_href_http_www_google_com_fusiontables_google_fusion_tables_a"><a href="http://www.google.com/fusiontables/">Google Fusion Tables</a></h4>
 <div class="paragraph">
-<p><a href="http://bit.ly/vg-lotto">この記事</a>はノルウェー統計局、納税者、国営ロト企業のデータを元に書かれている。このインタラクティブなグラフを使い、ノルウェーの地域や地方自治体の様々なデータを見ることができる。このグラフの元データを見ると、税収の数パーセントがロトによるものであることが分かる。このグラフはAccess, Excel, MySQL, Flashといった技術を使って作成された。</p>
+<p>このGoogleによるオンライン・データベースおよびマッピングツールは、素早く詳細なマップを作るためのデフォルトツールになっている。ズームの動きが必要な場合には特に欠かせない。すべてのGoogleマップをハイレゾで利用できる。しかも100MBという大量のCSVを一瞬で開くことができる。我々は Fusion Tables を使ってこのイラク上空のマップ <a href="#FIG0622">ウィキリークスの戦争記録 (the Guardian)</a> を作ったり、ホームレスの境界線を描いたマップ <a href="#FIG0623">Homelessness interactive map (the Guardian)</a> を作った。</p>
+</div>
+<div id="FIG0622" class="imageblock" style="float: none">
+<div class="content">
+<img src="figs/incoming/06-LL-01.jpg" alt="06 LL 01">
+</div>
+<div class="title">Figure 1. ウィキリークスの戦争記録 (the Guardian)</div>
+</div>
+<div id="FIG0623" class="imageblock" style="float: 0">
+<div class="content">
+<img src="figs/incoming/06-LL-02.jpg" alt="06 LL 02">
+</div>
+<div class="title">Figure 2. Homelessness interactive map (the Guardian)</div>
+</div>
+<div class="paragraph">
+<p>もっとも優れたところはその柔軟性だ。地域の境界を示すKMLファイルをアップすれば、それをデータテーブルと統合できる。もちろん使いやすいユーザーインターフェースも提供される。</p>
+</div>
+<div class="paragraph">
+<p>これを作るのにプログラマーである必要はない。また、この <a href="http://bit.ly/fusion-layers">Fusion Layers ツール</a> を使えば、異なる地図を一緒に並べたり、検索・フィルタといったオプションを加えたりできる。それをブログやウェブサイトに貼り付けることも可能だ。</p>
+</div>
+<div class="paragraph">
+<p><a href="http://bit.ly/fusiontables-tutorial">Googleのキャサリン・ハーレイによる素晴らしいチュートリアル</a> から始めてみるとよいだろう。</p>
+</div>
+<?dbfo-need height="2in"?>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>shpファイルを Fusion tables 形式に変換するのなら <a href="http://www.shpescape.com/">shpescape</a> が使える。一方で地図が複雑になりすぎてしまうところに注意したい。Fusion tables は1セルあたり100万ポイント以上になると処理しきれない。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__a_href_http_www_tableausoftware_com_public_tableau_public_a"><a href="http://www.tableausoftware.com/public">Tableau Public</a></h4>
+<div class="paragraph">
+<p>Tableau Public もプロ版の容量無制限サービスを使わないならば無料だ。シンプルに、しかも簡単にビジュアライズできる。10万項目の生データまで扱える。これは異なる形式のチャートを統合するときに使う。たとえば <a href="http://bit.ly/guardian-top-tax">世界で最も税率の高い地域マップ</a> は地図に加えて棒グラフも併せ持っている。</p>
+</div>
+<div class="paragraph">
+<p>あるいはデータ探索のためにも使える。たとえば、 <a href="#FIG0624">2012 Presidential Campaign Finance (the Guardian)</a> で  <a href="http://datajournalismhandbook.org/1.0/en/delivering_data_7.html">我々が行ったこと</a> が当てはまる。無料版で与えられている容量は使い果たしてしまったが、そこは注意しておこう。またTableau を使い倒すには、特殊な方法でフォーマットしたデータが必要になる。だがそこさえ理解できていれば、あとは直感的に作業が進むようになるだろう。　たとえば、アルゼンチンのhttp://blogs.lanacion.com.ar/data/[NACION Data] はTableauを使って完璧なデータジャーナリズムを組み立ててきた。</p>
+</div>
+<div id="FIG0624" class="imageblock" style="float: none">
+<div class="content">
+<img src="figs/incoming/06-LL-03.png" alt="06 LL 03">
+</div>
+<div class="title">Figure 3. 2012 Presidential Campaign Finance (the Guardian)</div>
+</div>
+<div class="paragraph">
+<p>Tableauにはよくできたオンライン・チュートリアルがあります。まずはこちらから始めましょう。 <a href="http://www.tableausoftware.com/learn/training" class="bare">http://www.tableausoftware.com/learn/training</a></p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>TableauはWindows向けに作られています。Mac版は計画中とのことですので、Macで動かすためにはParallelsのようなソフトウェアを使いましょう。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__a_href_http_www_google_com_google_d_s_spreadsheets_google_spreadsheet_charts_a"><a href="http://www.google.com/google-d-s/spreadsheets/">Google Spreadsheet Charts</a></h4>
+<div class="paragraph">
+<p>Google Spreadsheet Chartsはこちらからアクセス。 <a href="http://www.google.com/google-d-s/spreadsheets/" class="bare">http://www.google.com/google-d-s/spreadsheets/</a></p>
+</div>
+<div id="FIG0625" class="imageblock" style="float: none">
+<div class="content">
+<img src="figs/incoming/06-LL-04.jpg" alt="06 LL 04">
+</div>
+<div class="title">Figure 4. UK government spending and taxation (the Guardian)</div>
+</div>
+<div class="paragraph">
+<p>棒グラフ、折れ線グラフ、円グラフのような単純なサンプルだけでなく、 Google spreadsheets（Googleアカウントがあれば作れる）でもっと素晴らしいグラフが作成できることに気づくだろう。Hans Roslingによる <a href="http://www.gapminder.org/">Gapminder</a> のようにバブルがアニメーションするようなものだってできる。 <a href="https://developers.google.com/chart/?csw=1">Chart API</a> と違って、コードについて悩む必要もない。エクセルでグラフを作るのによく似ている。データをハイライトして、グラフのウィジェットをクリックするだけだ。カスタマイズオプションは試す価値がある。色や項目、目盛りを変えられる。これらはとても控えめなデザインなので、小さいグラフの場合には便利だ。折れ線グラフにも良いオプションがあって、注釈をつけることができる。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>グラフのカスタマイズオプションに時間を割いてみよう。自分なりのカラーパレットを作ることができる。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__a_href_https_datamarket_com_datamarket_a"><a href="https://datamarket.com/">Datamarket</a></h4>
+<div class="paragraph">
+<p>データ提供者としての方が有名だが、http://bit.ly/datamarket-explore[Datamarket] は数値を可視化するのにとても素晴らしいツールでもある。自分のデータをアップロードしてもよいし、サイトが提供しているたくさんのデータセットのいくつかを使うこともできるが、プロアカウントを購入するとよりよい選択肢が得られるだろう。</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Datamarket は時系列データについて最もうまく機能する。ただし、広範なデータ範囲には留意すること。</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="__a_href_http_www_958_ibm_com_software_data_cognos_manyeyes_many_eyes_a"><a href="http://www-958.ibm.com/software/data/cognos/manyeyes/">Many Eyes</a></h4>
+<div class="paragraph">
+<p>たくさんの思いやりのある世話を必要としているサイトがあるとすれば、それは IBM のhttp://ibm.co/ibm-manyeyes[Many Eyes] だろう。http://fernandaviegas.com/[Fernanda B. Viégas] と <a href="http://www.bewitched.com/">Martin Wattenberg</a> に作られたこのサービスが始まった時、利用者が単にデータセットをアップロードするだけで可視化できるというのは他に例を見ない試みだった。現在は、その製作者たちが Google で働くようになったためか、くすんだ色調のサイトは心なしか愛想をつかされているように見える。可視化についてはここのところあまり更新が見られない。</p>
+</div>
+<div id="FIG0627" class="imageblock" style="float: none">
+<div class="content">
+<img src="figs/incoming/06-LL-06.jpg" alt="06 LL 06">
+</div>
+<div class="title">Figure 5. <a href="http://bit.ly/guardian-dr-who">Doctor Who villains</a>; the Guardian</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<div class="title">Note</div>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>一度アップロードしたらデータを編集することはできないので、作成前に正しく用意できているか確認したほうが良い。</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <?dbfo-need height="2in"?>
 </div>
 <div class="sect3">
-<h4 id="_ネットワーク">ネットワーク</h4>
+<h4 id="__a_href_http_colorbrewer2_org_color_brewer_a"><a href="http://colorbrewer2.org/">Color Brewer</a></h4>
 <div class="paragraph">
-<p>我々は、ソーシャルネットワークの分析を行い、ノルウェーで最もお金持ちだった人物の157人の子孫の関係を調査した。我々の分析結果によると、相続人たちはお金だけではなく、親のネットワークも相続していることが分かった。26,000以上のつながりがあったが、全てフォトショップで手描きして図を作成した。その際、Access, Excel, メモ帳、ソーシャルネットワーク分析ツール <phrase role='keep-together'>Ucinet</phrase>を使用した。</p>
-</div>
-<div id="FIG0631" class="imageblock" style="float: none">
-<div class="content">
-<img src="figs/incoming/06-RR-01.png" alt="06 RR 01">
-</div>
-<div class="title">Figure 1. 納税者と国営ロトのデータをマッピングしたもの （ヴェルデンス・ガング）</div>
-</div>
-<div id="FIG0632" class="imageblock" style="float: 0">
-<div class="content">
-<img src="figs/incoming/06-RR-02.png" alt="06 RR 02">
-</div>
-<div class="title">Figure 2. 類は友を呼ぶ （ヴェルデンス・ガング）</div>
+<p>厳密には可視化のツールではないが、http://colorbrewer2.org/[Color Brewer] は地図の色を選ぶのに非常に有用だ。ベースとなる色を選んだら、パレット全体の色コードが得られる。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_マップ">マップ</h4>
+<h4 id="_その他">その他</h4>
 <div class="paragraph">
-<p>このhttp://bit.ly/vg-heatmap[バーチャートを合成して作った、動的なヒートマップ]で、週末のオスロのダウンタウンで一時間毎に起こった犯罪の件数を、数か月分、見ることができる。また、このヒートマップで、その時間帯に何人の警察官が働いていたのかを確認することができる。事件が発生してしまうのは、警察官の数が原因なのだ。このヒートマップは、ArcViewとSpatial Analystによって作成された。</p>
+<p>もし、これらで満足できなければ、 <a href="http://bit.ly/dailytekk-infographic">DailyTekk piece</a> もチェックしてみる価値がある。さらに多くの選択肢が提示されている。ここまで上げた選択肢が全てではなく、私たちが頻繁に使うものを紹介しただけだ。他にも沢山ある。例えば:</p>
 </div>
-<div id="FIG0633" class="imageblock" style="float: none">
-<div class="content">
-<img src="figs/incoming/06-RR-03.png" alt="06 RR 03">
-</div>
-<div class="title">Figure 3. 動画形式のヒートマップ （ヴェルデンス・ガング）</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_テキストマイニング">テキストマイニング</h4>
-<div class="paragraph">
-<p>我々はノルウェーにある7政党の党大会の講演内容をテキストマイニングし、http://bit.ly/vg-vis[公開]しました。全てのスピーチが分析され、様々なストーリーに利用されました。どのストーリーもグラフにリンクしていて、読者は政治家の言葉を調べたり調べることができたのです。これはExcel, Access, Flash, Illustratorで作成されました。もし2012年であれば、Javasciptでインタラクティブなグラフを作ったことでしょう。</p>
-</div>
-<div id="FIG0634" class="imageblock" style="float: none">
-<div class="content">
-<img src="figs/incoming/06-RR-04.png" alt="06 RR 04">
-</div>
-<div class="title">Figure 4. 党代表のスピーチをテキストマイニングしたもの （ヴェルデンス・ガング）</div>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_結論">結論</h4>
-<div class="paragraph">
-<p>どんなときにストーリーをビジュアライズすればよいのだろうか？読者の理解を助けたいという場合を除き、たいていの場合は必要ない。ストーリーには大量のデータが含まれているので、ビジュアライザーションが必要となるときがあるのだ。どのデータをビジュアライズするかは非常に重要である。我々が何かについて報道するとき、そこに含まれるものについては何でも分かっている。だが読者がストーリーを把握するために本当に必要なものは何であろうか？ある年からある年までの発展を見せるのであれば、おそらく表や単純なグラフで十分だろう。データジャーナリズムの仕事をするとき重要なのは、大量のデータを見せることではない。データジャーナリズムは、あくまでジャーナリズムなのだ！</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http://chartsbin.com/">Chartsbin</a>, クリックできる世界地図をつくるためのツール</p>
+</li>
+<li>
+<p><a href="http://www.icharts.net/">iCharts</a> 小さなグラフウィジェットに特化している</p>
+</li>
+<li>
+<p><a href="http://geocommons.com/">Geocommons</a> 世界地図やローカルな地図を作るためのデータと境界線データを共有してくれている</p>
+</li>
+<li>
+<p>おっと、これもあった <a href="http://piktochart.com/">piktochart.com</a> 。今人気があるテキストや数字の可視化のためのテンプレートを提供してくれている。</p>
+</li>
+</ul>
 </div>
 <div class="paragraph">
-<p>読者が異なるテーマを掘り下げることができるようにするため、インタラクティブなグラフや表を作るというトレンドが、この2-3年明確に続いている。よいビジュアライザーションというのは、よい写真のようなものだ。それが何であるか、見た一瞬あるいは少しの間に理解することができる。ビジュアルを見れば、それだけ理解することができるということだ。読者が使い方を理解できないビジュアライゼーションはよくない。詳細に関する情報が多すぎるのもそうだ。この事例は、テキストで構成するのが良いと考えたのだが、どうだろうか？</p>
-</div>
-<div class="paragraph">
-<p>ジョン・ボーンズ, ヴェルデンス・ガング</p>
+<p>&mdash; <em>Simon Rogers, the Guardian</em></p>
 </div>
 </div>
 </div>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

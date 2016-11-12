@@ -520,118 +520,118 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="sect4">
 <h5 id="_知見とステップを文書化する">知見とステップを文書化する</h5>
 <div class="paragraph">
-<p>If you think of this process as a journey through the dataset, the documentation is your travel diary. It will tell you where you have traveled to, what you have seen there, and how you made your decisions for your next steps. You can even start your documentation before taking your first look at the data.</p>
+<p>このプロセスをデータセットの旅と考えるならば、ドキュメンテーションは旅日記である。旅日記を見れば、どこをこれまで旅し、そこで何を見て、次の一歩をどのように決めたかがわかるだろう。データを最初に見るよりも前に、ドキュメンテーションをスタートすることだってできる。</p>
 </div>
 <div class="paragraph">
-<p>In most cases when we start to work with a previously unseen dataset, we are already full of expectations and assumptions about the data. Usually there is a reason why we are interested in that dataset that we are looking at. It&#8217;s a good idea to start the documentation by writing down these initial thoughts. This helps us to identify our bias and reduces the risk of misinterpretation of the data by just finding what we originally wanted to find.</p>
+<p>見たことのないデータセットに取り組みはじめる、その多くの場合において、データに対して私たちは期待や前提に満ちた状態である。通常、私たちが見るデータセットに何故興味を持っていることには理由がある。こういった最初の考えをドキュメンテーションに書き留めておくことは良いアイディアである。最初に何を見つけようとしていたのかを探すことで、私たちのバイアスを特定することや、データを誤って解釈してしまうリスクを減らすことに一役買うことになる。</p>
 </div>
 <div class="paragraph">
-<p>I really think that the documentation is the most important step of the process&#8212;&#8203;and it is also the one we&#8217;re most likely to tend to skip. As you will see in the example below, the described process involves a lot of plotting and data wrangling. Looking at a set of 15 charts you created might be very confusing, especially after some time has passed. In fact, those charts are only valuable (to you or any other person you want to communicate your findings) if presented in the context in which they have been created. Hence you should take the time to make some notes on things like:</p>
+<p>私はドキュメンテーションこそがプロセスの中で最も重要なステップだと思っている。そして、私たちが最も無視してしまいがちなものでもある。以下の例で見るように、叙述のプロセスは描写やデータ論争を引き起こすものである。過去に作った15の図表を見ることは混乱を招くものであろうし、特に少し時間が経つと尚更である。実際、そういった図表が（あなた自身や、発見を伝える他の人々にとって）価値があるのは、その図表自体が作られた文脈において見せられた場合のみである。よって、以下のような但し書きをするために時間を使うべきである：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Why have I created this chart?</p>
+<p>なぜ私はこの図表を作ったのか？</p>
 </li>
 <li>
-<p>What have I done to the data to create it?</p>
+<p>それを作るためにデータに何をしたのか？</p>
 </li>
 <li>
-<p>What does this chart tell me?</p>
+<p>この図表は何を示しているのか？</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="_transform_data">Transform data</h5>
+</div>
+<div class="sect3">
+<h4 id="_データを加工する">データを加工する</h4>
 <div class="paragraph">
-<p>Naturally, with the insights that you have gathered from the last visualization, you might have an idea of what you want to see next. You might have found some interesting pattern in the dataset which you now want to inspect in more detail.</p>
+<p>ビジュアライゼーションから集めたインサイトがあれば、自然と次に何が見たいか、ということについての考えを持つことになるだろう。より深く調べたいと思うデータセットの中にいくつかの興味深いパターンを見つけているかもしれない。</p>
 </div>
 <div class="paragraph">
-<p>Possible transformations are:</p>
+<p>ありうるデータ加工は以下のようなものだ:</p>
 </div>
 <div class="dlist">
 <dl>
-<dt class="hdlist1">Zooming</dt>
+<dt class="hdlist1">ズーミング</dt>
 <dd>
-<p>To have look at a certain detail in the visualization</p>
+<p>ビジュアライゼーション内の特定の詳細を見ること</p>
 </dd>
-<dt class="hdlist1">Aggregation</dt>
+<dt class="hdlist1">アグリゲーション</dt>
 <dd>
-<p>To combine many data points into a single group</p>
+<p>多くのデータのポイントを、単一のグループにまとめること</p>
 </dd>
-<dt class="hdlist1">Filtering</dt>
+<dt class="hdlist1">フィルタリング</dt>
 <dd>
-<p>To (temporarily) remove data points that are not in our major focus</p>
+<p>主要な焦点ではないポイントを（一時的に）削除すること</p>
 </dd>
-<dt class="hdlist1">Outlier removal</dt>
+<dt class="hdlist1">異常値排除</dt>
 <dd>
-<p>To get rid of single points that are not representative for 99% of the dataset.</p>
+<p>データセットの99%の代表値ではない単一のポイントを省くこと</p>
 </dd>
 </dl>
 </div>
 <div class="paragraph">
-<p>Let&#8217;s consider that you have visualized a graph, and what came out of this was nothing but a mess of nodes connected through hundreds of edges (a very common result when visualizing so-called 'densely connected networks'). One common transformation step would be to filter some of the edges. If, for instance, the edges represent money flows from donor countries to recipient countries, we could remove all flows below a certain amount.</p>
-</div>
+<p>グラフをビジュアル化したところで、そこから数百ものエッジを通って接続されたノード以外の何者も生まれなかった場合のことを考えてみよう（いわゆる「密度の高いネットワーク」をビジュアル化したときにはごく一般的なことである）。よくある加工のひとつは、エッジのうちのいくつかをフィルタリングすることである。もし、例えば、エッジが供与国から受領国へのお金の流れを表しているのだとすれば、一定の金額以下の流れをすべて削除することができる。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_which_tools_to_use">Which Tools to Use</h4>
+<h4 id="_どのツールを使うべきか">どのツールを使うべきか</h4>
 <div class="paragraph">
-<p>The question of tools is not an easy one. Every data visualization tool available is good at something. Visualization and data wrangling should be easy and cheap. If changing parameters of the visualizations takes you hours, you won&#8217;t experiment that much. That doesn&#8217;t necessarily mean that you don&#8217;t need to learn how to use the tool. But once you learned it, it should be really efficient.</p>
+<p>ツールに関する質問は簡単ではない。利用可能なデータビジュアライゼーションのツールは、どれも何かに秀でている。ビジュアライゼーションやデータ加工は簡単で、安価であるべきである。もしビジュアライゼーションのパラメーター変更に何時間もかかっているようであれば、実験にそこまでの時間はかけることにはならないだろう。それは必ずしも、ツールの使い方を学ぶ必要がない、ということを意味しない。しかし、一度学んでしまえば、それは非常に効果的であろう。</p>
 </div>
 <div class="paragraph">
-<p>It often makes a lot of sense to choose a tool that covers both the data wrangling and the data visualization issues. Separating the tasks in different tools means that you have to import and export your data very often. Here&#8217;s a short list of some data visualization and wrangling tools:</p>
+<p>データ加工とデータビジュアライゼーションの問題を包含するツールを選ぶことは意味のあることだ。異なるツールで違う作業をすることは、データを頻繁にインポートしたりエクスポートしたりする必要があることを意味する。データビジュアライゼーションとデータ加工のツールのリストを少し紹介しておく：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Spreadsheets like LibreOffice, Excel or Google Docs</p>
+<p>LibreOfficeやExcel, Google Docsのようなスプレッドシート</p>
 </li>
 <li>
-<p>Statistical programming frameworks like R (r-project.org) or Pandas (pandas.pydata.org)</p>
+<p>R (r-project.org)やPandas (pandas.pydata.org) のような静的なプログラミングフレームワーク</p>
 </li>
 <li>
-<p>Geographic Information Systems (GIS) like Quantum GIS, ArcGIS, or GRASS</p>
+<p>Quantum GIS, ArcGIS, GRASSのような地理情報システム</p>
 </li>
 <li>
-<p>Visualization Libraries like d3.js (mbostock.github.com/d3), Prefuse (prefuse.org), or Flare (flare.prefuse.org)</p>
+<p>d3.js (mbostock.github.com/d3), Prefuse (prefuse.org) や Flare (flare.prefuse.org)のようなビジュアライゼーションライブラリ</p>
 </li>
 <li>
-<p>Data wrangling tools like Google Refine or Datawrangler</p>
+<p>Google RefineやDatawranglerのようなデータ加工ツール</p>
 </li>
 <li>
-<p>Non-programming visualization software like ManyEyes or Tableau Public (tableausoftware.com/products/public)</p>
+<p>ManyEyes や Tableau Public (tableausoftware.com/products/public)のような非プログラミング系のビジュアライゼーションソフトウェア</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>The sample visualizations in the next section were created using R, which is kind of a Swiss Army knife of (scientific) data visualization.</p>
+<p>次のセクションのビジュアライゼーションサンプルはRを使って制作されたものである。Rは（科学的）データビジュアライゼーションにおいて万能なものである。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_an_example_making_sense_of_us_election_contribution_data">An Example: Making Sense of US Election Contribution Data</h4>
+<h4 id="_例_米国選挙の寄付金データの意味">例：米国選挙の寄付金データの意味</h4>
 <div class="paragraph">
-<p>Let us have look at the US Presidential Campaign Finance database, which contains about 450,000 contributions to US presidential candidates. The CSV file is 60 megabytes and way too big to handle easily in a program like Excel.</p>
+<p>アメリカの大統領候補に対する450,000もの寄付を含む、米国の大統領選の財務データベースを見てみよう。CSVファイルは60メガバイトで、Excelのようなプログラムで簡単に扱うには大きすぎる。</p>
 </div>
 <div class="paragraph">
-<p>In the first step I will explicitly write down my initial assumptions on the FEC contributions dataset:</p>
+<p>最初のステップでは、FECの寄付金データセットにおける最初の仮定を明確に書き下すことにする：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>Obama gets the most contributions (since he is the president and has the greatest popularity).</p>
+<p>オバマは最も寄付を集めている（なぜなら彼は大統領であり、最大の人気がある）</p>
 </li>
 <li>
-<p>The number of donations increases as the time moves closer to election date.</p>
+<p>寄付の数は選挙日が近づくにつれ増えていく</p>
 </li>
 <li>
-<p>Obama gets more small donations than Republican candidates.</p>
+<p>オバマは共和党員よりも少額の寄付をたくさん集めている</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>To answer the first question, we need to <em>transform</em> the data. Instead of each single contribution, we need to sum the total amounts contributed to each candidate. After <em>visualizing</em> the results in a sorted table, we can confirm our assumption that Obama would raise the most money:</p>
+<p>最初の質問に答えるため、データを_加工_する必要がある。ひとつひとつの寄付ではなく、各候補者への寄付された額の総額を計算する必要があった。整理されたテーブルの結果を_ビジュアル化_したあと、オバマがほとんどの金額を集めただろうという仮定が確実なものとなる：</p>
 </div>
 <table class="tableblock frame-all grid-all spread">
 <colgroup>
@@ -640,177 +640,177 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </colgroup>
 <thead>
 <tr>
-<th class="tableblock halign-left valign-top">Candidate</th>
-<th class="tableblock halign-left valign-top">Amount ($)</th>
+<th class="tableblock halign-left valign-top">候補者</th>
+<th class="tableblock halign-left valign-top">金額 (USD)</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Obama, Barack</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">バラク・オバマ</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">72,453,620.39</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Romney, Mitt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ミット・ロムニー</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">50,372,334.87</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Perry, Rick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リック・ペリー</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">18,529,490.47</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Paul, Ron</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ロン・ポール</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">11,844,361.96</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Cain, Herman</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ハーマン・ケイン</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">7,010,445.99</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Gingrich, Newt</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ニュート・ギングリッチ</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">6,311,193.03</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Pawlenty, Timothy</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ティム・ポーレンティー</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">4,202,769.03</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Huntsman, Jon</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ジョン・ミード・ハンツマン</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2,955,726.98</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Bachmann, Michelle</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ミシェル・バックマン</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">2,607,916.06</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Santorum, Rick</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">リック・サントラム</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">1,413,552.45</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Johnson, Gary Earl</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">ゲーリー・アール・ジョンソン</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">413,276.89</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Roemer, Charles E. 'Buddy' III</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">チャールズ・ローマー3世</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">291,218.80</p></td>
 </tr>
 <tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">McCotter, Thaddeus G</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">タデウス・G・マコッター</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">37,030.00</p></td>
 </tr>
 </tbody>
 </table>
 <div class="paragraph">
-<p>Even though this table shows  the minimum and maximum amounts and the order, it does not tell very much about the underlying patterns in candidate ranking. <a href="#FIG059">Visualizations to spot underlying patterns (Gregor Aisch)</a> is another view on the data, a chart type that is called a "dot chart," in which we can see everything that is shown in the table <em>plus</em> the patterns within the field. For instance, the dot chart allows us to immediately compare the distance between Obama and Romney, and Romney and Perry, without needing to subtract values. (Note: the dot chart was created using R. You can find links to the source code at the end of this chapter).</p>
+<p>この表は最少額・最高額と順序を示しているものの、候補者の順位の裏に流れるパターンについてわかることは少ない。 <a href="#FIG059">潜在的なパターンを見つけるビジュアライゼーション (Gregor Aisch)</a> はデータを別の観点から見たものである。ドット・チャートと呼ばれるタイプの図表であるが、これで表に現れたもの <em>だけでなく</em> 表の中のパターンを見ることができる。例えば、ドット・チャートによってオバマとロムニーの距離、ロムニーとペリーの距離をすぐに比較することが、値を抜き出すことなく容易になる。（注：このドットチャートはRを用いて作られた。この章の末尾にソースコードへのリンクがある）</p>
 </div>
 <div id="FIG059" class="imageblock" style="float: 0">
 <div class="content">
 <img src="figs/incoming/05-CC.png" alt="05 CC">
 </div>
-<div class="title">Figure 4. Visualizations to spot underlying patterns (Gregor Aisch)</div>
+<div class="title">Figure 4. 潜在的なパターンを見つけるビジュアライゼーション (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>Now, let us proceed with a bigger picture of the dataset. As a first step, I <em>visualized</em> all contributed amounts over time in a simple plot. We can see that almost all donations are very, very small compared to three really big outliers. Further investigation reveals that these huge contributions are coming from the ``Obama Victory Fund 2012'' (also known as Super PAC) and were made on June 29th ($450k), September 29th ($1.5mio), and December 30th ($1.9mio).</p>
+<p>では、データセットのより大きな視点へと進もう。最初のステップとして、時間とともにすべての寄付金額をシンプルなプロットの中に_ビジュアル化_した。3つの実に大きな異常値に比べ、ほとんどの寄付はごくごく小さいものであることが見て取れる。より深く調べてみると、これらの大きな寄付は "Obama Victory Fund 2012"（Super PACとしても知られている）から来ており、6月29日（450,000ドル）、9月29日（1,500,000ドル）、12月30日（1,900,000ドル）のことであることがわかる。</p>
 </div>
 <div id="FIG0510" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-DD.png" alt="05 DD">
 </div>
-<div class="title">Figure 5. Three clear outliers (Gregor Aisch)</div>
+<div class="title">Figure 5. 明らかな3つの異常値 (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>While the contributions by Super PACs alone is undoubtedly the biggest story in the data, it might be also interesting to look beyond it. The point now is that these big contributions disturb our view on the smaller contributions coming from individuals, so we&#8217;re going to remove them from the data. This transform is commonly known as outlier removal. After visualizing again, we can see that most of the donations are within the range of $10k and -$5k.</p>
+<p>Super PACs単体による寄付はデータにおいて疑いようのない大きなストーリーであるが、それを越えてデータを見てみるのもまた興味深い。ここでのポイントは、これらの大きな寄付によって、個人からの小さな寄付に着目できなくなっていることであるので、それらをデータから取り除くことにする。この加工は異常値除去として知られている。もう一度ビジュアル化してみると、ほとんどの寄付が5,000ドルから10,000ドルの間であることがわかる。</p>
 </div>
 <div id="FIG0511" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-EE.png" alt="05 EE">
 </div>
-<div class="title">Figure 6. Removing the outliers (Gregor Aisch)</div>
+<div class="title">Figure 6. 異常値を取り除く (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>According to the contribution limits placed by the FECA, individuals are not allowed to donate more than $2500 to each candidate. As we see in the plot, there are numerous donations made above that limit. In particular, two big contributions in May attract our attention. It seems that they are 'mirrored' in negative amounts (refunds) in June and July. Further investigation in the data reveals the following transactions:</p>
+<p>FECAによって定められている寄付の限度によると、個人は各候補者に対して2,500ドル異常を寄付することを認められていない。プロットの中に見られるように、限度を越えて行われた寄付が多数ある。特に、5月の2つの大きな寄付が目を引く。これらは6月と7月にマイナス金額で相殺（返金）されているようだ。さらなる調査をデータに行うことで、以下の取引も明らかになる：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>On May 10, <em>Stephen James Davis</em>, San Francisco, employed at Banneker Partners (attorney), has donated <strong>$25,800</strong> to Obama.</p>
+<p>5月10日、サンフランシスコのBanneker Partnersに雇用されている弁護士_Stephen James Davis_がオバマに25,800ドル寄付</p>
 </li>
 <li>
-<p>On May 25, <em>Cynthia Murphy</em>, Little Rock, employed at the Murphy Group (public relations), has donated <strong>$33,300</strong> to Obama.</p>
+<p>5月25日、リトルロックのMurphy Groupに雇用されているPR_Cynthia Murphy_がオバマに33,300ドル寄付</p>
 </li>
 <li>
-<p>On June 15, the amount of <strong>$30,800</strong> was refunded to <em>Cynthia Murphy</em>, which reduced the donated amount to <strong>$2500</strong>.</p>
+<p>6月15日、_Cynthia Murphy_に30,800ドル返金。これにより、寄付額が2,500ドルまで減額</p>
 </li>
 <li>
-<p>On July 8, the amount <strong>$25,800</strong> was refunded to <em>Stephen James Davis</em>, which reduced the donated amount to $0.</p>
+<p>7月8日、_Stephen James Davis_に25,800ドル返金。これにより、寄付額が0ドルまで減額</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>What&#8217;s interesting about these numbers? The $30,800 refunded to Cynthia Murphy equals the maximum amount individuals may give to national party committees per year. Maybe she just wanted to combine both donations in one transaction, which was rejected. The $25,800 refunded to Stephen James Davis possibly equals the $30,800 minus $5000 (the contribution limit to any other political committee).</p>
+<p>これらの数字で興味深い点はなんだろう？Cynthia Murphyに返金された30,800ドルは、National Party Committeeに1年で譲渡しても良い個人の金額に等しい。おそらく、彼女は両方の寄付をひとつの送金で済ませたかったのだが、拒否されてしまった。Stephen James Davisに返金された25,800ドルは、おそらく30,800ドルから5,000ドル（他の政治的委員会への寄付金額の限度額）を引いたものに等しい。</p>
 </div>
 <div class="paragraph">
-<p>Another interesting finding in the last plot is a horizontal line pattern for contributions to Republican candidates at $5000 and -$2500. To see them in more detail, I visualized just the Republican donations. The resulting graphic is one great example of patterns in data that would be invisible without data visualization.</p>
+<p>最後のプロットから導き出せるもうひとつの興味深い発見は、5,000ドルと-2,500ドルにある共和党候補への寄付にある水平の直線パターンである。それらをより詳細に見るため、共和党への寄付だけをビジュアライズした。結果のグラフは、データにおけるひとつの大きなパターンの例であり、データビジュアライゼーションなしには見えないものであろう。</p>
 </div>
 <div id="FIG0512" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-FF.png" alt="05 FF">
 </div>
-<div class="title">Figure 7. Removing outliers 2 (Gregor Aisch)</div>
+<div class="title">Figure 7. 異常値を取り除く2 (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>What we can see is that there are many $5000 donations to Republican candidates. In fact, a look up in the data returns that these are 1243 donations, which is only 0.3% of the total number of donations, but since those donations are evenly spread across time, the line appears. The interesting thing about the line is that donations by individuals were limited to $2500. Consequently, every dollar above that limit was refunded to the donors, which results in the second line pattern at -$2500. In contrast, the contributions to Barack Obama don&#8217;t show a similar pattern.</p>
+<p>共和党候補への5,000ドルの寄付が数多くあることが見てとれる。事実、データに戻って見てみると、1,243件の寄付があり、それは全体の0.3%に過ぎないのであるが、時間軸に沿って均等に行われているため、直線が現れるのである。この直線の興味深い点は、個人からの寄付が2,500ドルまでに制限されていたことだ。結果として、限度を越えた額はすべて寄付者に返金され、それが-2,500ドルの直線になっているのである。反対に、バラク・オバマへの寄付には同様のパターンが見られない。</p>
 </div>
 <div id="FIG0513" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-GG.png" alt="05 GG">
 </div>
-<div class="title">Figure 8. Removing outliers 3 (Gregor Aisch)</div>
+<div class="title">Figure 8. 異常値を取り除く3 (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>So, it might be interesting to find out why thousands of Republican donors did not notice the donation limit for individuals. To further analyze this topic, we can have a look at the total number of $5k donations per candidate.</p>
+<p>数千もの共和党への寄付者が、個人の寄付の限度額に気づかなかった理由について知ることは興味深いだろう。この件についてさらに分析するため、候補者ごとの5,000ドルの総寄付件数を見てみよう。</p>
 </div>
 <div id="FIG0514" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-HH.png" alt="05 HH">
 </div>
-<div class="title">Figure 9. Donations per candidate (Gregor Aisch)</div>
+<div class="title">Figure 9. 候補者ごとの寄付 (Gregor Aisch)</div>
 </div>
 <div class="paragraph">
-<p>Of course, this is a rather distorted view since it does not consider the total amounts of donations received by each candidate. The next plot shows the percentage of $5k donations per candidate.</p>
+<p>もちろん、各候補者の受け取った総額を考慮していないので、これは少し捻じ曲がった見方である。次のプロットで、候補者ごとの5,000ドルの寄付をパーセンテージで見てみよう。</p>
 </div>
 <div id="FIG0515" class="imageblock" style="float: none">
 <div class="content">
 <img src="figs/incoming/05-II.png" alt="05 II">
 </div>
-<div class="title">Figure 10. Where does the senator&#8217;s money come from?: donations per candidate (Gregor Aisch)</div>
+<div class="title">Figure 10. 上院議員のお金はどこから？: 候補者ごとの寄付 (Gregor Aisch)</div>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_what_to_learn_from_this">What To Learn From This</h4>
+<h4 id="_ここからわかること">ここからわかること</h4>
 <div class="paragraph">
-<p>Often, such a visual analysis of a new dataset feels like an exciting journey to an unknown country. You start as a foreigner with just the data and your assumptions, but with every step you make, with every chart you render, you get new insights about the topic. Based on those insights, you make decisions for your next steps and what issues are worth further investigation. As you might have seen in this chapter, this process of visualizing, analyzing and transformation of data could be repeated nearly infinitely.</p>
+<p>しばしば、このような新しいデータセットのビジュアル分析は知らない国へのエキサイティングな旅のように感じられる。データと仮説に対して何も知らない人としてスタートし、一歩一歩進み、図表を描くごとに、そのトピックについて新たな洞察を得ることになる。それら洞察にもとづき、次の一歩を決め、さらなる調査に値する問題が何かを決めていくのだ。この章で見てきたように、データのビジュアル化、分析、改変のプロセスは、ほとんど永遠に続くものなのである。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_get_the_source_code">Get the Source Code</h4>
+<h4 id="_ソースコードを手に入れる">ソースコードを手に入れる</h4>
 <div class="paragraph">
-<p>All of the charts shown in this chapter were created using the wonderful and powerful software R. Created mainly as a scientific visualization tool, it is hard to find any visualization or data wrangling technique that is not already built into R. For those who are interested in how to visualize and wrangle data using R, here&#8217;s the source code of the charts generated in this chapter:</p>
+<p>この章で紹介したすべての図表は、素晴らしくまたパワフルなソフトウェア「R」によって作成された。主に科学的ビジュアライゼーションツールとして作られているが、Rに実装されていないビジュアライゼーションやデータ加工のテクニックを見つけることは難しい。Rを用いてデータのビジュアル化や加工に興味がある方々向けに、この章の図表を作るのに使ったソースコードを掲載する：</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://gist.github.com/1769733">dotchart: contributions per candidate</a></p>
+<p><a href="https://gist.github.com/1769733">ドット・チャート: 候補者ごとの寄付</a></p>
 </li>
 <li>
-<p><a href="https://gist.github.com/1816161">plot: all contributions over time</a></p>
+<p><a href="https://gist.github.com/1816161">plot: 時間に沿ったすべての寄付</a></p>
 </li>
 <li>
-<p><a href="https://gist.github.com/1816169">plot: contributions by authorized committees</a></p>
+<p><a href="https://gist.github.com/1816169">plot: 認可された組織からの寄付</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>There is also a wide range of books and tutorials available.</p>
+<p>様々な書籍やチュートリアルもある。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Gregor Aisch, Open Knowledge Foundation</em></p>
@@ -820,7 +820,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

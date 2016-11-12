@@ -5,7 +5,7 @@
 <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="generator" content="Asciidoctor 1.5.4">
-<title>4.4. Getting Data from the Web（ウェブからデータを得る）</title>
+<title>4.4. ウェブからデータを得る</title>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,300italic,400,400italic,600,600italic%7CNoto+Serif:400,400italic,700,700italic%7CDroid+Sans+Mono:400,700">
 <style>
 /* Asciidoctor default stylesheet | MIT License | http://asciidoctor.org */
@@ -430,7 +430,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect2">
-<h3 id="_4_4_getting_data_from_the_web_ウェブからデータを得る">4.4. Getting Data from the Web（ウェブからデータを得る）</h3>
+<h3 id="_4_4_ウェブからデータを得る">4.4. ウェブからデータを得る</h3>
 <div class="paragraph">
 <p>あらゆる方法を試行したものの、データを届ける方法はまだ見つかっていない。ウェブ上にデータは見つかったものの、悲しいかな、ダウンロード可能でなかったり、コピー＆ペーストできない状態だったとする。大丈夫、そこからデータを取り出す方法はまだあるかもしれない。例えば：</p>
 </div>
@@ -455,13 +455,13 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>この章では、HTMLで書かれたWebページからデータを取得する基本的な例を紹介する。</p>
 </div>
 <div class="sect3">
-<h4 id="_what_is_machine_readable_data_機械可読データとは">What Is Machine-Readable Data?（機械可読データとは？）</h4>
+<h4 id="_機械可読データとは">機械可読データとは？</h4>
 <div class="paragraph">
 <p>これら方法のほとんどの目的は、機械可読データへのアクセスである。機械可読データとは、人間が読める形かどうかにはかかわらず、コンピュータ処理のために生成されるデータのことである。このようなデータの構造は、含まれる情報に関連し、表示のされ方には関連しない。機械可読フォーマットの代表例はCSV、XML、JSON、Excelファイルである。一方、Word文書やHTMLページ、PDFファイルは、文書の視覚的なレイアウトと関係が深い。例えばPDFはプリンタへ直接情報伝達する言語であり、判別可能な文字よりも、ページ上の線や点の位置により大きく関わっている。</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="_scraping_websites_what_for_webサイトのスクレイピング_目的は">Scraping Websites: What For?（Webサイトのスクレイピング：目的は？）</h4>
+<h4 id="_webサイトのスクレイピング_目的は">Webサイトのスクレイピング：目的は？</h4>
 <div class="paragraph">
 <p>皆これはすでに行っている：Webサイトを訪れ、その中のある表に興味を持ち、Excelファイルへコピーする。その中でいくつか数値を増やしたり、保存しておくこともできる。しかし実際はあまり有効ではない。あなたが望むデータはたくさんのWebサイトにまたがって存在することもある。手動でのコピー作業はすぐに退屈になるだろう。ちょっとしたコードを使うのが理にかなっている。</p>
 </div>
@@ -470,7 +470,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_what_you_can_and_cannot_scrape_スクレイプできる_できない内容">What You Can and Cannot Scrape（スクレイプできる/できない内容）</h4>
+<h4 id="_スクレイプできる_できない内容">スクレイプできる/できない内容</h4>
 <div class="paragraph">
 <p>スクレイプできる内容にはやはり制約がある。スクレイプを難しくする点はいくつかある：</p>
 </div>
@@ -506,10 +506,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <p>いくつかの情報については、きつくて辛い唯一の方法がある。それぞれが12そこらのレコードを持つ膨大なエクセルファイルたちのデータをつなぎあわせることは閣僚会合の包括的なリストをつくるための唯一の方法だった。しかし別の情報においてはウェブのスクレイピングが非常に有用であることを示した。</p>
 </div>
 <div class="paragraph">
-<p>Using a service like ScraperWiki to ask coders to produce a scraper for information like the Register of MPs' interests did around half of our job for us: we had all MPs' information in one sheet, ready for the (lengthy) task of analysing and cleaning.</p>
+<p>ScraperWiki のようなサービスを使ってプログラマーに議員利益登記のような情報のスクレイパーを作るようお願いすることで、私たちの仕事の半分は終わった。議員の情報を一枚の表として用意することができ、（残りの長い）分析と整理の仕事に取り掛かれるというわけだ。</p>
 </div>
 <div class="paragraph">
-<p>Services like this (or tools such as Outwit Hub) are a huge help to journalists trying to compile messy data who are unable to code themselves.</p>
+<p>このようなサービス（や Outwit Hub のようなツール)は、自分自身でプログラムが組めないようなジャーナリストが整理されていないデータを編纂するのに大いに役立つ。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>James Ball, the Guardian</em></p>
@@ -518,7 +518,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_tools_that_help_you_scrape_スクレイプに役立つツール">Tools That Help You Scrape（スクレイプに役立つツール）</h4>
+<h4 id="_スクレイプに役立つツール">スクレイプに役立つツール</h4>
 <div class="paragraph">
 <p>Webサイトからの情報抽出に使えるプログラムは、ブラウザ拡張機能やWebサービスを含め数多くある。ブラウザによっては <a href="http://www.readability.com/">Readability</a> （ページからテキストを抽出する）や <a href="http://www.downthemall.net/">DownThemAll</a> （一度にたくさんのファイルをダウンロードできる）などによって、退屈な手動作業を自動化できる。Chromeの拡張機能である <a href="http://bit.ly/chrome-scraper">Scraper extension</a> はWebサイトにあるテーブルを抽出するために作成された。FireFoxの開発者向け拡張機能 <a href="http://getfirebug.com/">FireBug</a> （同様の機能はChrome、Safari、IEにすでに存在する）を用いれば、Webサイトがどのように構築され、ブラウザとサーバがどのような通信を行うかを明確に追跡できる。</p>
 </div>
@@ -539,7 +539,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 </div>
 <div class="sect3">
-<h4 id="_the_anatomy_of_a_web_page_webページの解剖">The Anatomy of a Web Page（Webページの解剖）</h4>
+<h4 id="_webページの解剖">Webページの解剖</h4>
 <div class="paragraph">
 <p>HTMLページは、HTML「タグ」で定義される箱型領域の階層構造によって定義される。大きな箱の中には、たくさんの小さな箱が入る。多くの子要素（列とセル）を持つテーブルがその一例である。タグの種類は多く、箱やテーブル、画像、リンクの生成など、それぞれが異なる機能を持つ。タグはその他に付加的な属性を持つこともでき、他と重複しない識別子を与えられる。また「クラス」と呼ばれるグループに含めることも可能で、これにより文書中のどの要素であるかを特定できる。要素を適切な選択と内容抽出、これがスクレイパーを作成する際の鍵となる。</p>
 </div>
@@ -616,7 +616,7 @@ print event_title</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>最後に、表にあるそれぞれの列を探し、そのヘッダーから出来事のタイトルを抽出するためにDOMを使用する。2つのコンセプト：for ループと要素選択 (.cssselect) を新たに用いる。forループの仕組みはその名前の通りだ。アイテムの一覧を1つずつ対象にして、一時的なエイリアス（この場合は row ）を割り当て、アイテムごとにインデントされた処理をそれぞれ実行する。</p>
+<p>最後に、表にあるそれぞれの列を探し、そのヘッダーから出来事のタイトルを抽出するためにDOMを使用する。2つのコンセプト：for ループと要素選択 （.cssselect） を新たに用いる。forループの仕組みはその名前の通りだ。アイテムの一覧を1つずつ対象にして、一時的なエイリアス（この場合は row ）を割り当て、アイテムごとにインデントされた処理をそれぞれ実行する。</p>
 </div>
 <div class="paragraph">
 <p>もう1つの新しいコンセプト、要素選択は、文書中の要素を探すための特別な言語を活用する。CSSセレクタは、通常はHTML要素へのレイアウト情報付加に使われ、ページ外の要素を適切に指定できる。今回の場合は（6行目で） #tblEvents tr を選択し、ID tblEvents （ハッシュ記号でIDを識別する）を持つ表の要素中に含まれるそれぞれの &lt;tr&gt; にマッチする。この処理で取得できるのは &lt;tr&gt; 要素の一覧である。</p>
@@ -661,12 +661,12 @@ print event_title</pre>
 </div>
 <div class="sidebarblock">
 <div class="content">
-<div class="title">Scraping a Public Database</div>
+<div class="title">公共のデータベースをスクレイプ</div>
 <div class="paragraph">
-<p>Some French physicians are free to choose their own rates, so that one can pay between €70 and €500 for a 30-minute visit at an oncologist, for instance. This data regarding rates is legally public, but the administration provides only a hard-to-navigate online database. In order to have a good view of the doctors' rates for Le Monde, I decided to scrape the entire database.</p>
+<p>フランスの外科医の一部は、30分の腫瘍医訪問に対して例えば70ユーロから500ユーロの間といった具合に、自分たちのレートを自由に決めることができる。このレートに関するデータは、法的には公開されているものであるが、行政からは使いにくいオンラインデータベースしか提供されていない。ル・モンド紙で医者のレートを見やすく提示したかったため、私はデータベース全体をスクレイプすることに決めた。</p>
 </div>
 <div class="paragraph">
-<p>That&#8217;s where the fun began. The front-end search form was a Flash application that redirected to an HTML result page via a POST request. With help from Nicolas Kayser-Bril, it took us some time to figure out that the application used a third page as a ``hidden'' step between the search form and the result page. This page was actually used to store a cookie with values from the search form that was then accessed by the results page. It would have been hard to think of a more convoluted process, but the options of the cURL library in PHP make it easy to overcome the hurdles, once you know where they are! In the end, getting hold of the database was a 10-hour task, but it was worth it.</p>
+<p>そこからは楽しかった。フロントエンドの検索フォームは Flash アプリケーションになっていて、POST リクエストを介して HTML ページにリダイレクトされるようになっていた。 Nicolas Kayser-Bril の助けを得て、そのアプリケーションが「隠された」ステップとして、検索フォームと結果ページの間に第三のページを持っていることを少々時間をかけて突き止めた。この隠されたページは、検索フォームで入力された値をクッキーとして保存して、結果ページからその値にアクセスできるようにしていた。これ以上ないくらい複雑で難しいプロセスになっていたが、難しいポイントがどこにあるか分かった段階で、PHP の cURLライブラリ のオプションのおかげで簡単にこのハードルを乗り越えることができた。最終的に、データベースを手に入れるのに10時間を要したが、それだけの価値がある仕事だった。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Alexandre Léchenet, Le Monde</em></p>
@@ -679,7 +679,7 @@ print event_title</pre>
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

@@ -439,12 +439,18 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="paragraph">
 <p>いつも見つけやすいとは限らないが、ウェブ上の多くのデータベースは、公開した本人が望むと望まざるとにかかわらずサーチエンジンにインデックスされている。それを探すためのいくつかのヒントを紹介しよう。</p>
 </div>
-<div class="literalblock">
-<div class="content">
-<pre>・データを探すときは、検索結果として得られるべきデータのフォーマットや情報源を想定して、データの「コンテキスト」も検索クエリに含むようにしよう。Googleや他のサーチエンジンはファイルタイプでの検索ができるようになっている。例えば、スプレッドシートだけを検索する場合は、検索クエリに‘filetype:XLS filetype:CSV'を追加すればいい。同様に、地図データには‘filetype:shp'、データベースから抽出されたデータには‘filetype:MDB, filetype:SQL, filetype:DB'を追加する。もし、そういう気分になったなら、PDFファイルだけを探す（‘filetype:pdf’）ことも可能だ。
-・URLの一部で検索することもできる。Googleで‘inurl:downloads filetype:xls’を使えば、URLに“downloads”を含むすべてのExcelファイルを見つけることができる。（もし、ひとつのダウンロード元フォルダが見つかったら、そのサーバの同じフォルダに別のデータが見つかることもよくある。）また、検索結果を特定のドメインに限定することもできる。例えば、‘site:agency.gov’のように。
-・もう一つ人気のあるトリックを。データそのものを直接探すのではなく、データが固まって置かれている格納場所を見つける方法がある。例えば、‘site:agency.gov Directory Listing’という検索クエリでは、Webサーバが生成したディレクトリの中身のリストを手に入れることができるので、生データのファイルに簡単にアクセスできる可能性がある。また、‘site:agency.gov Database Download’という検索クエリは、人間が作成したリストを見つけようとする。</pre>
-</div>
+<div class="ulist">
+<ul>
+<li>
+<p>データを探すときは、検索結果として得られるべきデータのフォーマットや情報源を想定して、データの「コンテキスト」も検索クエリに含むようにしよう。Googleや他のサーチエンジンはファイルタイプでの検索ができるようになっている。例えば、スプレッドシートだけを検索する場合は、検索クエリに「filetype:XLS filetype:CSV」を追加すればいい。同様に、地図データには「filetype:shp」、データベースから抽出されたデータには「filetype:MDB, filetype:SQL, filetype:DB」を追加する。PDFファイルだけを探すことだって、その気になれば可能だ。「filetype:pdf」を加えることだけでよい。</p>
+</li>
+<li>
+<p>URLの一部で検索することもできる。Googleで「inurl:downloads filetype:xls」を使えば、URLに「downloads」を含むすべてのExcelファイルを見つけることができる。（もし、ひとつのダウンロード元フォルダが見つかったら、そのサーバの同じフォルダに別のデータが見つかることもよくある。）また、検索結果を特定のドメインに限定することもできる。例えば、「site:agency.gov」のように。</p>
+</li>
+<li>
+<p>もう一つ人気のあるトリックを。データそのものを直接探すのではなく、データが固まって置かれている格納場所を見つける方法がある。例えば、「site:agency.gov Directory Listing」という検索クエリでは、Webサーバが生成したディレクトリの中身のリストを手に入れることができるので、生データのファイルに簡単にアクセスできる可能性がある。また、「site:agency.gov Database Download」という検索クエリは、人間が作成したリストを見つけようとする。</p>
+</li>
+</ul>
 </div>
 <?dbfo-need height="2in"?>
 <div class="paragraph">
@@ -490,23 +496,25 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </dd>
 <dt class="hdlist1"><a href="https://scraperwiki.com/">ScraperWiki</a></dt>
 <dd>
-<p>・ScraperWikiは、データの一部を簡単に切り取って抽出するためのツールである。これにより、データをさまざまなアプリで再利用したり、ジャーナリストや研究者がデータを引っ掻き回したりすることができる。ほとんどのscraperWikiや抽出されたデータベースは公開されており、再利用可能である。</p>
+<p>ScraperWiki は、データの一部を簡単に切り取って抽出するためのツールである。これにより、データをさまざまなアプリで再利用したり、ジャーナリストや研究者がデータを引っ掻き回したりすることができる。ほとんどのscraperWikiや抽出されたデータベースは公開されており、再利用可能である。</p>
+<div class="ulist">
+<ul>
+<li>
+<p>世界銀行や国連のデータポータルはハイレベルな指標をすべての国に提供している。それらのデータの多くは過去何年にもわたって蓄積されている。</p>
+</li>
+<li>
+<p>データの共有と再販に関するコミュニティ形成を狙った多くのスタートアップ企業が出現している。これには、Buzzdata（私有や公有のデータセットについて共有したりコラボレーションしたりする場を提供）や、InfochimpsやDataMarketのようなデータショップが含まれる。</p>
+</li>
+</ul>
+</div>
 </dd>
-</dl>
-</div>
-<div class="paragraph">
-<p>・世界銀行や国連のデータポータルはハイレベルな指標をすべての国に提供している。それらのデータの多くは過去何年にもわたって蓄積されている。
-  ・データの共有と再販に関するコミュニティ形成を狙った多くのスタートアップ企業が出現している。これには、Buzzdata（私有や公有のデータセットについて共有したりコラボレーションしたりする場を提供）や、InfochimpsやDataMarketのようなデータショップが含まれる。</p>
-</div>
-<div class="dlist">
-<dl>
 <dt class="hdlist1"><a href="http://buzzdata.com/">Buzzdata</a>, <a href="http://www.infochimps.com/">Infochimps</a>, and <a href="http://datamarket.com/">DataMarket</a></dt>
 <dd>
-<p>Emerging startups that aim to build communities around data sharing and resale.</p>
+<p>データ共有と再販にまつわるコミュニティ形成を企む新興スタートアップ</p>
 </dd>
 <dt class="hdlist1"><a href="http://datacouch.com/">DataCouch</a></dt>
 <dd>
-<p>・データコーチでは、あなたのデータをアップロードし、精錬し、共有＆可視化を行うことができる</p>
+<p>データコーチでは、あなたのデータをアップロードし、精錬し、共有＆可視化を行うことができる</p>
 </dd>
 <dt class="hdlist1"><a href="http://www.freebase.com/">Freebase</a></dt>
 <dd>
@@ -578,7 +586,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <?dbfo-need height="1in"?>
 <div class="paragraph">
-<p>Mashing together names with state and federal (FEC) election data, we found that Perry reached out to campaign and super PAC donors <a href="http://bo.st/perry-phone">from state work phones</a>, a frowned-upon practice that raised questions about ties between him and a ``super PAC'' working in his favor.</p>
+<p>州および連邦の選挙データと名前を組み合わせ、ペリーは選挙運動とスーパーPACドナーにhttp://bo.st/perry-phone[州の電話から]取り組んでいたことを我々は把握した。これは眉をひそめるような行動であるし、時に彼とスーパーPACの間の関係についての疑問を提起するものであった。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>ジャック・ギラム, AP通信</em></p>
@@ -604,10 +612,10 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 <div class="content">
 <div class="title">法律の失敗</div>
 <div class="paragraph">
-<p>After reading a <a href="http://bit.ly/hygiene-inspections">scholarly article</a> explaining that publishing the outcome of hygiene inspections in restaurants reduced the number of food-related illnesses in Los Angeles, I asked the Parisian hygiene services for the list of inspections. Following the procedure set out by the French FOIA, I waited 30 days for their refusal to answer, then went to the Access to Public Data Commission (CADA in French), which rules on the legitimacy of FOI requests. CADA upheld my demand and ordered the administration to release the data. The administration subsequently asked for two months extra time, and CADA accepted that. Two months later, the administration still hadn&#8217;t done anything.</p>
+<p>レストランでの衛生検査の結果を公開することで、ロサンゼルスの食品関連の病気の数を減少させたことを説明するというhttp://bit.ly/hygiene-inspections[学術記事]を読んだ後、私はパリの衛生サービスに検査のリストを求めた。フランスのFOIAによって設定された手順に従い、私は30日間待ったが拒否されてしまった。その後、FOIリクエストの正当性について管轄するアクセス・トゥ・パブリック・データ・コミッション（フランス語でCADA ） に行った。CADAは私の要求を支持し、データを公開することを命じた。データの公開について、運営側はさらに2ヶ月の時間を求め、CADAはそれを受け入れたが、2ヵ月経っても何もされなかった。</p>
 </div>
 <div class="paragraph">
-<p>I tried to get some big-name (and big-pocketed) open data advocates to go to court (which is a €5000 affair and a sure win with CADA support), but they were afraid to compromise their relations with official open data programs. This example is one among several where the French administration simply ignores the law and the official initiatives do nothing to support grassroots demands for data.</p>
+<p>私は裁判所に行くにあたり（€5000の裁判になり、CADAサポートで勝利できると確認していた）、複数の著名で（かつ寛容な）オープンデータの支援者を得ようとしたが、彼らは公的なオープンデータのプログラムとの関係を損なうことを恐れていた。この例は、フランス機関が単に法律を無視し、公的な取り組みがデータに対する草の根の要求をサポートしない例のひとつである。</p>
 </div>
 <div class="paragraph">
 <p>&mdash; <em>Nicolas Kayser-Bril, Journalism++</em></p>
@@ -620,7 +628,7 @@ body.book #toc,body.book #preamble,body.book h1.sect0,body.book .sect1>h2{page-b
 </div>
 <div id="footer">
 <div id="footer-text">
-最終更新: 2016-02-11 18:57:24 JST
+最終更新: 2016-04-10 01:10:39 JST
 / ライセンス: <a href="http://creativecommons.org/licenses/by-sa/3.0/">CC BY-SA</a>
 / この翻訳は試訳段階にあります。翻訳の改善にご協力くださる方は<a href="https://www.facebook.com/groups/datajournalism.jp/">Data Journalism Handbook 日本語翻訳プロジェクト</a>にご参加ください。
 </div>

@@ -1,3 +1,10 @@
+#!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+import sys
+reload(sys)
+sys.setdefaultencoding('UTF8')
+
 import os
 from lxml import html
 from pprint import pprint
@@ -13,10 +20,10 @@ short_title: {{short_title.replace(':', ' -')}}
     <div class="btn-group book-nav-top span9">
         <a class='btn' href="index.html">Home</a>
         {% if parent_name %}
-            <a href="{{parent_name}}.html" class="btn">Chapter: {{parent_title}}</a>
+            <a href="{{parent_name}}.html" class="btn">章: {{parent_title}}</a>
         {% endif %}
         {% if next_name %}
-            <a href="{{next_name}}.html" class="btn">Next: {{next_title.rsplit('(',1)[0]}}</a>
+            <a href="{{next_name}}.html" class="btn">次: {{next_title.rsplit('(',1)[0]}}</a>
         {% endif %}
     </div>
     <div class="span3 right-align">
@@ -31,7 +38,7 @@ short_title: {{short_title.replace(':', ' -')}}
 </div>
 
 {% if children %}
-    <h3>What's in this chapter?</h3>
+    <h3>本章の内容</h3>
     <ul class='toc'>
         {% for c in children %}
             <li><a href="{{c.name}}.html">{{c.short_title}}</a></li>
@@ -42,18 +49,18 @@ short_title: {{short_title.replace(':', ' -')}}
 <div class="btn-group book-nav-bottom">
     <a class='btn' href="index.html">Home</a>
     {% if parent_name %}
-        <a href="{{parent_name}}.html" class="btn">Chapter: {{parent_title}}</a>
+        <a href="{{parent_name}}.html" class="btn">章: {{parent_title}}</a>
     {% endif %}
     {% if next_name %}
-        <a href="{{next_name}}.html" class="btn">Next: {{next_title.rsplit('(',1)[0]}}</a>
+        <a href="{{next_name}}.html" class="btn">次: {{next_title.rsplit('(',1)[0]}}</a>
     {% endif %}
 </div>
 """
 
 INDEX = """---
 layout: default
-title: Welcome
-short_title: Welcome
+title: ようこそ
+short_title: ようこそ
 ---
 
 <div class="row">
@@ -82,7 +89,7 @@ def clean_html(elem):
         if img.get('src').startswith('data:'):
             img.attrib['src'] = img.get('alt')
             del img.attrib['alt']
-            print img.get('alt')
+            print(img.get('alt'))
         if 'width' in img.attrib:
             del img.attrib['width']
     for a in elem.findall('.//a'):
@@ -94,7 +101,7 @@ def clean_html(elem):
             if caption is not None:
                 a.text = caption.text.split('.')[0]
             else:
-                print a.attrib
+                print(a.attrib)
     return html.tostring(elem)
 
 
@@ -109,7 +116,7 @@ def write_index(segments, out_dir):
 
 
 def write_file(content, out_dir, name):
-    print name
+    print(name)
     file_name = os.path.join(out_dir, name + '.html')
     fh = file(file_name, 'wb')
     fh.write(content.encode('utf-8'))
@@ -121,12 +128,12 @@ def split_up(in_file, out_dir):
     doc = html.parse(in_file)
     for sect1 in doc.findall('//div[@class="sect1"]'):
         sect1_title = sect1.find('h2')
-        print [sect1_title.text]
+        print([sect1_title.text])
         name = sect1_title.get('id').strip('_')
         sect1_title_text = sect1_title.text
         for i, sect2 in enumerate(sect1.findall('.//div[@class="sect2"]')):
             sect2_title = sect2.find('h3')
-            print [sect2_title.text]
+            print([sect2_title.text])
             segments.append({
                 'name': name + '_' + str(i),
                 'title': sect2_title.text,
