@@ -1,2 +1,3 @@
 markdown: rdiscount
 highlighter: :pygments
+exclude: ["render.sh", "jekyllify.py", "index.adoc"]

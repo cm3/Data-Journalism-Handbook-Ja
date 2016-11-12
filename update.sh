@@ -8,15 +8,14 @@ echo -e "${COLOR_1}pull from Transifex ... \n say 'no' to next question!${COLOR_
 yes "no" | tx pull -f -l ja_JP
 python3 insert-translators.py
 echo -e "${COLOR_1}render asciidoc ... ${COLOR_OFF}"
-#cd asciidoc
-#source render.sh
-#cd ../
 cd jekyll
 source render.sh
 cd ../
-#cd asciidoc-manual-chunk
-#source render.sh
-#cd ../
+cd asciidoctor
+source render.sh
+cd ../
+cp -r jekyll/_site/* githubio/DataJournalismJP.github.io/handbook
+cp asciidoctor/index.html githubio/DataJournalismJP.github.io/handbook/all.html
 echo Done.
 echo `date`
 deactivate
