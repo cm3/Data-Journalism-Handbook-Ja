@@ -9,10 +9,10 @@ yes "no" | tx pull -f -l ja_JP
 python3 insert-translators.py
 echo -e "${COLOR_1}render asciidoc ... ${COLOR_OFF}"
 cd jekyll
-source render.sh
+. render.sh
 cd ../
 cd asciidoctor
-source render.sh
+. render.sh
 cd ../
 cp -r jekyll/_site/* githubio/DataJournalismJP.github.io/handbook
 cp asciidoctor/index.html githubio/DataJournalismJP.github.io/handbook/all.html
