@@ -4,15 +4,16 @@
 
 # 必要な準備
 
-Python 2 を使う。
+Python 3 を使う。
 
 ```
-virtualenv py2env
-source ./py2env/bin/activate
+virtualenv py3env
+source ./py3env/bin/activate
 pip install transifex-client
 tx init
 tx set --auto-remote http://www.transifex.net/projects/p/the-data-journalism-handbook/
 sudo apt-get install asciidoc
+sudo apt-get install asciidoctor
 ```
 
 # 毎回の更新
