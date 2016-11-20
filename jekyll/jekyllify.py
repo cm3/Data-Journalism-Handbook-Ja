@@ -1,9 +1,9 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import sys
-reload(sys)
-sys.setdefaultencoding('UTF8')
+# import sys
+# reload(sys)
+# sys.setdefaultencoding('UTF8')
 
 import os
 from lxml import html
@@ -109,7 +109,6 @@ def write_segment(data, out_dir):
     content = Template(SEGMENT).render(data)
     write_file(content, out_dir, data.get('name'))
 
-
 def write_index(segments, out_dir):
     content = Template(INDEX).render(segments=segments)
     write_file(content, out_dir, 'index')
@@ -118,8 +117,8 @@ def write_index(segments, out_dir):
 def write_file(content, out_dir, name):
     print(name)
     file_name = os.path.join(out_dir, name + '.html')
-    fh = file(file_name, 'wb')
-    fh.write(content.encode('utf-8'))
+    fh = open(file_name, 'w')
+    fh.write(content)
     fh.close()
 
 
@@ -137,7 +136,7 @@ def split_up(in_file, out_dir):
             segments.append({
                 'name': name + '_' + str(i),
                 'title': sect2_title.text,
-                'body': clean_html(sect2),
+                'body': clean_html(sect2).decode('utf-8'),
                 'el': sect2,
                 'parent_name': name,
                 'parent_title': sect1_title_text
@@ -146,7 +145,7 @@ def split_up(in_file, out_dir):
         segments.append({
             'name': name,
             'title': sect1_title_text,
-            'body': clean_html(sect1),
+            'body': clean_html(sect1).decode('utf-8'),
             'el': sect1,
             'parent_name': None,
             'parent_title': None
@@ -154,8 +153,7 @@ def split_up(in_file, out_dir):
 
     for segment in segments:
         segment['short_title'] = segment['title'] #.rsplit('(')[0]
-        segment['children'] = filter(lambda s: s['parent_name'] == segment['name'], segments)
-
+        segment['children'] = [s for s in segments if s['parent_name'] == segment['name']]
     sorted_segments = []
     for segment in segments:
         if segment['parent_name']:
