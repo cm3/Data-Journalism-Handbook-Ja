@@ -12,7 +12,6 @@ source ./py3env/bin/activate
 pip install transifex-client
 tx init
 tx set --auto-remote http://www.transifex.net/projects/p/the-data-journalism-handbook/
-sudo apt-get install asciidoc
 sudo apt-get install asciidoctor
 ```
 
@@ -28,9 +27,9 @@ update.sh の冒頭には cron で環境変数を読み込むために作者の 
 
 # 仕組みなど
 
-asciidoc コマンドでまず book.html を生成し（`asciidoc -b html5 -o "book.html" index.adoc`）、それを適宜分割しつつ yaml ヘッダーを付けて（`python jekyllify.py`）、`jekyll build`。そのため、book.htmlを見ることで全体を見渡すこともできる。また、本家 [asciidoc](https://github.com/asciidoc/asciidoc) よりも 分家 [asciidoctor](https://github.com/asciidoctor/asciidoctor) の方が開発が活発で、洗練されているため、asciidoctor フォルダに asciidoctor による１ページレンダリングも用意している。
+asciidoctor コマンドでまず book.html を生成し（`asciidoctor -b html5 -o "book.html" index.adoc`）、それを適宜分割しつつ yaml ヘッダーを付けて（`python jekyllify.py`）、`jekyll build`。そのため、book.htmlを見ることで全体を見渡すこともできる。目次付きの１ページレンダリングも all.html に用意している。
 
-それらを [DataJournalismJP/DataJournalismJP.github.io](https://github.com/DataJournalismJP/DataJournalismJP.github.io) を pull したサブディレクトリにコピーしている。本スクリプトを動かしているサーバで内容を確認後、push することで、[Data Journalism Handbook 日本語版プロジェクト](http://datajournalismjp.github.io/)のウェブサイトを更新できる。
+それを [DataJournalismJP/DataJournalismJP.github.io](https://github.com/DataJournalismJP/DataJournalismJP.github.io) を pull したサブディレクトリにコピーしている。本スクリプトを動かしているサーバで内容を確認後、push することで、[Data Journalism Handbook 日本語版プロジェクト](http://datajournalismjp.github.io/)のウェブサイトを更新できる。
 
 # ライセンスについて
 
