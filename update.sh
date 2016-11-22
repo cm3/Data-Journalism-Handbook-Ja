@@ -1,7 +1,7 @@
 # see http://qiita.com/yudoufu/items/48cb6fb71e5b498b2532
 cd $(dirname ${BASH_SOURCE:-$0})
 source /home/kameda/.bashrc
-source ./py2env/bin/activate
+source activate py35con
 COLOR_1="\e[32m"
 COLOR_OFF="\e[m"
 echo -e "${COLOR_1}pull from Transifex ... \n say 'no' to next question!${COLOR_OFF}"
@@ -17,4 +17,4 @@ cd ../
 cp -r jekyll/_site/* githubio/DataJournalismJP.github.io/handbook
 echo Done.
 echo `date`
-deactivate
+source deactivate

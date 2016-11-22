@@ -1,19 +1,21 @@
 # これは何？
 
-[The Data Journalism Handbook の日本語訳プロジェクト](https://www.transifex.com/liliana.bounegru/the-data-journalism-handbook/language/ja_JP/)の現状を HTML 化するためのスクリプト。`update.sh` で、Transifex から翻訳ファイルを pull してきて、asciidoc でレンダリングできる。figs は [okfn/ddjbook in GitHub](https://github.com/okfn/ddjbook/tree/web/web/figs/) よりコピー。
+[The Data Journalism Handbook の日本語訳プロジェクト](https://www.transifex.com/liliana.bounegru/the-data-journalism-handbook/language/ja_JP/)の現状を HTML 化するためのスクリプト。`update.sh` で、Transifex から翻訳ファイルを pull してきて、asciidoctor でレンダリングできる。figs は [okfn/ddjbook in GitHub](https://github.com/okfn/ddjbook/tree/web/web/figs/) よりコピー。
 
 # 必要な準備
 
-Python 3 を使う。
+Python 3 を使う。例:
 
 ```
-virtualenv py3env
-source ./py3env/bin/activate
+conda create -n py35con python=3.5.2
+source activate py35con
 pip install transifex-client
 tx init
 tx set --auto-remote http://www.transifex.net/projects/p/the-data-journalism-handbook/
 sudo apt-get install asciidoctor
 ```
+
+他にも `conda install` すべきモジュールはあると思う。
 
 # 毎回の更新
 
