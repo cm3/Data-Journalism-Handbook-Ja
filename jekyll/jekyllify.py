@@ -98,7 +98,7 @@ def clean_html(elem):
                 a.text = caption.text.split('.')[0]
             else:
                 print(a.attrib)
-    return html.tostring(elem)
+    return html.tostring(elem, encoding='utf8')
 
 
 def write_segment(data, out_dir):

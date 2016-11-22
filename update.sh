@@ -9,7 +9,6 @@ yes "no" | tx pull -f -l ja_JP
 python3 insert-translators.py
 echo -e "${COLOR_1}render asciidoc ... ${COLOR_OFF}"
 cd jekyll
-# . render.sh
 /usr/local/bin/asciidoctor -b html5 -o "book.html" index.adoc
 /usr/local/bin/asciidoctor -b html5 -o "all.html" -d book -a toc2 index.adoc
 python3 jekyllify.py
