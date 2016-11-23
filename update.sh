@@ -10,11 +10,10 @@ python3 insert-translators.py
 echo -e "${COLOR_1}render asciidoc ... ${COLOR_OFF}"
 cd jekyll
 /usr/local/bin/asciidoctor -b html5 -o "book.html" index.adoc
-/usr/local/bin/asciidoctor -b html5 -o "all.html" -d book -a toc2 index.adoc
+/usr/local/bin/asciidoctor -b html5 -o "../DataJournalismJP.github.io/handbook/all.html" -d book -a toc2 index.adoc
 python3 jekyllify.py
-/usr/local/bin/jekyll build
+/usr/local/bin/jekyll build --destination "../DataJournalismJP.github.io/handbook"
 cd ../
-cp -r jekyll/_site/* githubio/DataJournalismJP.github.io/handbook
 echo Done.
 echo `date`
 source deactivate
