@@ -438,3 +438,8 @@ div.title {
 .underline {
     text-decoration: underline;
 }
+
+span.hatebu_hcount, span.line_sp{
+    vertical-align: -5px;
+    margin-left: 5px;
+}

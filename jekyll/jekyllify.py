@@ -13,7 +13,7 @@ short_title: {{short_title.replace(':', ' -')}}
 ---
 
 <div class='row'>
-    <div class="btn-group book-nav-top span9">
+    <div class="btn-group book-nav-top span6">
         <a class='btn' href="index.html">Home</a>
         {% if parent_name %}
             <a href="{{parent_name}}.html" class="btn">章: {{parent_title}}</a>
@@ -22,9 +22,11 @@ short_title: {{short_title.replace(':', ' -')}}
             <a href="{{next_name}}.html" class="btn">次: {{next_title.rsplit('(',1)[0]}}</a>
         {% endif %}
     </div>
-    <div class="span3 right-align">
+    <div class="span6 right-align">
         <span class='st_facebook_hcount' displayText='Facebook'></span>
         <span class='st_twitter_hcount' st_title="{{ short_title }} #ddjbook" displayText='Tweet'></span>
+        <span class='hatebu_hcount'><a href="http://b.hatena.ne.jp/entry/datajournalismjp.github.io/handbook/{{name}}.html" class="hatena-bookmark-button" data-hatena-bookmark-title="{{title}}" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></span>
+        <span class='line_sp'><div class="line-it-button" style="display: none;" data-type="share-b" data-lang="ja" ></div></span>
     </div>
 </div>
 
@@ -58,6 +60,15 @@ layout: default
 title: ようこそ
 short_title: ようこそ
 ---
+
+<div class='row'>
+    <div class="span12 right-align">
+        <span class='st_facebook_hcount' displayText='Facebook'></span>
+        <span class='st_twitter_hcount' st_title="データ・ジャーナリズム・ハンドブック日本語版 #ddjbook" displayText='Tweet'></span>
+        <span class='hatebu_hcount'><a href="http://b.hatena.ne.jp/entry/datajournalismjp.github.io/handbook/" class="hatena-bookmark-button" data-hatena-bookmark-title="{{title}}" data-hatena-bookmark-layout="simple-balloon" title="このエントリーをはてなブックマークに追加"><img src="https://b.st-hatena.com/images/entry-button/button-only@2x.png" alt="このエントリーをはてなブックマークに追加" width="20" height="20" style="border: none;" /></a></span>
+        <span class='line_sp'><div class="line-it-button" style="display: none;" data-type="share-b" data-lang="ja" ></div></span>
+    </div>
+</div>
 
 <div class="row">
     <div class='span6'>

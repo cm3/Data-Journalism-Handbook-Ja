@@ -4,9 +4,11 @@ source /home/kameda/.bashrc
 source activate py35con
 COLOR_1="\e[32m"
 COLOR_OFF="\e[m"
+# fetch (when you develop and debug jekyll templete, comment out this 3 lines.)
 echo -e "${COLOR_1}pull from Transifex ... \n say 'no' to next question!${COLOR_OFF}"
 yes "no" | /usr/local/bin/tx pull -f -l ja_JP
 python3 insert-translators.py
+# render
 echo -e "${COLOR_1}render asciidoc ... ${COLOR_OFF}"
 cd jekyll
 /usr/local/bin/asciidoctor -b html5 -o "book.html" index.adoc
